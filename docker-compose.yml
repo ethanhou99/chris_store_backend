@@ -13,7 +13,7 @@ version: '3'
 services:
 
   chrisstore:
-    image:  ${CREPO}/chris_store
+    image:  fnndsc/chris_store
     ports:
       - "8010:8010"
     depends_on:
