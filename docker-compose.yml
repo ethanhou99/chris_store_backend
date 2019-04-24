@@ -11,6 +11,18 @@
 version: '3'
 
 services:
+
+  chrisstore:
+    image:  ${CREPO}/chris_store
+    ports:
+      - "8010:8010"
+    depends_on:
+      - chris_store_dev_db
+      - swift_service
+    labels:
+      name: "ChRIS_store"
+      role: "Chris store service"
+
   chris_store_dev:
     image:  ${CREPO}/chris_store:dev
     volumes:
