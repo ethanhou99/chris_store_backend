@@ -35,7 +35,7 @@ RUN apt-get update \
   && useradd -u $UID -ms /bin/bash localuser                          \
   && addgroup localuser sudo                                          \
   && echo "localuser:localuser" | chpasswd                            \
-  && adduser localuser sudo                                           \
+  && sudo locakuser -aG docker [non-root user]                        \
   && apt-get install -y libmysqlclient-dev                            \
   && apt-get install -y apache2 apache2-dev                           \
   && pip3 install -r ${REQPATH}/local.txt                             \
