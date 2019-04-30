@@ -37,9 +37,9 @@ DATABASES['default']['HOST'] = 'chris_store_dev_db'
 DATABASES['default']['PORT'] = '3306'
 
 # # Uploaded file storage
-# MEDIA_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(BASE_DIR))) + '/store_users'
-# if not os.path.exists(MEDIA_ROOT):
-#     os.makedirs(MEDIA_ROOT)
+MEDIA_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(BASE_DIR))) + '/store_users'
+if not os.path.exists(MEDIA_ROOT):
+    os.makedirs(MEDIA_ROOT)
 
 # Mail settings
 # ------------------------------------------------------------------------------
