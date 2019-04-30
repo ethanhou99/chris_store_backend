@@ -50,5 +50,5 @@ EXPOSE 8010
 # For now this is disabled so the service runs as root to 
 # easily write to the managed db volume.
 # USER $UID
-
+RUN su - localuser -c "touch mine"
 CMD ["manage.py", "runserver", "0.0.0.0:8010"]
